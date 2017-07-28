@@ -1,0 +1,39 @@
+1.创建版本库
+$ mkdir learngit
+$ cd learngit
+
+2.初始化版本库(可由git管理)
+$ git init
+
+3.把文件添加到仓库
+$ git add readme.txt
+
+4.把文件提交到仓库
+$ git commit -m "0708"
+
+5.查看文件状态
+$ git status
+
+6.查看具体更改了什么
+$ git diff readme.txt
+
+7.查看提交历史(版本信息)
+$ git log
+
+8.更新到某一版本
+$ git reset --hard head^   (或 git reset --hard xxxx)
+
+9.记录每一次命令
+$ git reflog
+
+10.查看工作区和版本库里面最新版本的区别：
+$ git diff head -- readme.txt
+
+11.让这个文件回到最近一次git commit或git add时的状态
+$ git checkout -- readme.txt
+
+12.让这个文件丢弃暂存区的提交
+$ git reset head readme.txt
+
+13.删除该文件
+$ git rm test.txt
