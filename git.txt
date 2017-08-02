@@ -37,3 +37,72 @@ $ git reset head readme.txt
 
 13.删除该文件
 $ git rm test.txt
+
+
+14.远程创建仓库
+$ git remote add origin https://github.com/langbaby2/learngit.git
+
+15.把本地库的所有内容推送到远程库上  (第一次有参数 -u 以后就不用带了)
+$ git push -u origin master  
+
+16.提交线上
+ $ git push origin master
+
+17.克隆到本地
+$ git clone https://github.com/langbaby2/gitskills.git
+
+18.创建dev分支，然后切换到dev分支  （然后工作 git add file git commit -m "标识"）
+$ git checkout -b dev   (git checkout dev   git checkout dev)
+
+19.查看当前分支
+$ git branch
+
+20.切换回master分支
+$ git checkout master
+
+20.把dev分支的工作成果合并到master分支上  (然后 git push origin master )
+$ git merge dev
+
+21.删除dev分支
+$ git branch -d dev
+
+22.合并出现冲突 
+$ git status    git add file    git commit -m "xxx" 
+
+23.查看分支的合并情况：
+$ git log --graph --pretty=oneline --abbrev-commit
+
+24.合并分支时，禁用fast forward (会创建一个新的commit)
+$ git merge --no-ff -m "merge with no-ff" dev
+
+25.把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+$ git stash
+
+26.工作现场存放列表
+$ git stash list
+
+27.恢复指定的stash (这种恢复方式 stash还在 需要用 git stash drop 来删除)
+$ git stash apply stash@{0}
+
+28.stash删除
+$ git stash drop
+
+29.恢复stash(这种恢复方式 stash被清空)
+$ git stash pop
+
+30.丢弃一个没有被合并过的分支
+$ git branch -D branchname
+
+31.查看远程库的信息
+$ git remote        $ git remote -v
+
+32.推送分支，就是把该分支上的所有本地提交推送到远程库
+$ git push origin master
+
+33.删除已有的GitHub远程库
+$ git remote rm origin
+
+34.让Git显示颜色，会让命令输出看起来更醒目：
+$ git config --global color.ui true
+
+
